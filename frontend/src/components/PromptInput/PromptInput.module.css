@@ -1,0 +1,40 @@
+.promptInput {
+  display: flex;
+  gap: var(--space-sm);
+  width: 95%;
+  min-width: 350px;
+  max-width: 830px;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1em;
+  box-shadow: var(--shadow-lg);
+  border-radius: 2em;
+  font-size: var(--font-size-lg);
+  position: fixed;
+  bottom: 1em;
+  background-color: var(--color-accent);
+}
+
+.promptInput>textarea {
+  flex: 1;
+
+  min-height: 2.5em;
+  max-height: 10em;
+
+  resize: none;
+  overflow-y: auto;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font: inherit;
+  line-height: 1.5;
+  padding: 0.2em;
+
+  transition: height 120ms ease-out;
+}
+
+.promptInput>.sendButton {
+  flex: none;
+}

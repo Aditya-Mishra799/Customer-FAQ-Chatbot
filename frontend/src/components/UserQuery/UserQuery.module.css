@@ -1,0 +1,16 @@
+.userQuery{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-self: flex-end;
+
+}
+.userQuery > p{
+    background-color: var(--color-user-bg);
+    color: var(--color-user-text);
+    padding: 0.6em 0.5em;
+    border-radius: 8px 8px 0px 8px;
+}
+.userQuery .controls {
+    align-self: flex-end;
+}

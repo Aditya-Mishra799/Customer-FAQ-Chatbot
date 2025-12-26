@@ -1,0 +1,44 @@
+.sendButton {
+
+  width: 3em;
+  height: 3em;
+  border-radius: 999px;
+
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+
+  border: var(--border-default);
+  box-shadow: var(--shadow-sm);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.sendButton:hover:not(:disabled) {
+  background-color: var(--btn-primary-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.sendButton:active:not(:disabled) {
+  transform: scale(0.96);
+  box-shadow: var(--shadow-xs);
+}
+
+.sendButton:disabled {
+  background-color: var(--btn-primary-disabled);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.sendButton:focus-visible {
+  outline: none;
+  box-shadow:
+    var(--shadow-sm),
+    0 0 0 2px var(--color-bg),
+    0 0 0 4px var(--color-focus-ring);
+}

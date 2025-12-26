@@ -1,0 +1,22 @@
+.iconButton {
+    border-radius: 5px;
+    padding: 0.4em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-base);
+}
+
+.iconButton:disabled{
+    color: var( --color-text-muted);
+    cursor: not-allowed;
+}
+.iconButton:hover:not(:disabled) {
+    background-color: var(--color-surface-soft);
+    box-shadow: var(--shadow-sm);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}

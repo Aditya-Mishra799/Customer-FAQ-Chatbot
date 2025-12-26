@@ -1,0 +1,175 @@
+:root {
+  /* ===================== */
+  /* COLORS – LIGHT MODE */
+  /* ===================== */
+
+  /* Backgrounds */
+  --color-bg: #020617;
+  /* near-black */
+  --color-surface: #020617;
+  --color-surface-muted: #020617;
+  --color-surface-soft: #e9e3e3;
+
+  /* Text */
+  --color-text-primary: #e5e7eb;
+  /* soft white */
+  --color-text-secondary: #9ca3af;
+  --color-text-muted: #6b7280;
+
+  /* Headings */
+  --color-heading: #f9fafb;
+
+  /* Borders */
+  --color-border: #020617;
+  --color-border-strong: #020617;
+
+  /* Icons */
+  --color-icon-primary: #e5e7eb;
+  --color-icon-muted: #9ca3af;
+
+
+  /* Accent */
+  --color-accent: #f9fafb;
+  /* white button */
+  --color-accent-hover: #e5e7eb;
+  --color-accent-text: #020617;
+
+  /* User / Bot bubbles */
+  --color-user-bg: #e9e9eb;
+  --color-user-text: #020617;
+
+  --color-bot-bg: #f5f3f3;
+  --color-bot-text: #212326;
+
+  /* States */
+  --color-focus-ring: #60a5fa;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+
+
+  --btn-primary-bg: #111827;
+  /* black */
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #030712;
+  --btn-primary-active: #000000;
+  --btn-primary-disabled: #9ca3af;
+
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: #111827;
+  --btn-secondary-hover: #f3f4f6;
+  --btn-secondary-border: #d1d5db;
+
+  --btn-danger-bg: #dc2626;
+  --btn-danger-text: #ffffff;
+  --btn-danger-hover: #b91c1c;
+
+  --border-default: 1px solid #e5e7eb;
+  --border-strong: 1px solid #d1d5db;
+  --border-muted: 1px solid #f3f4f6;
+
+  --border-focus: 2px solid #2563eb;
+
+
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+
+  --line-height-sm: 1.4;
+  --line-height-md: 1.6;
+
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+}
+
+
+[data-theme="dark"] {
+  /* Backgrounds */
+  --color-bg: #020617;
+  /* near-black */
+  --color-surface: #020617;
+  --color-surface-muted: #020617;
+
+  --color-surface-soft: #4a4141;
+
+  /* Text */
+  --color-text-primary: #e5e7eb;
+  /* soft white */
+  --color-text-secondary: #9ca3af;
+  --color-text-muted: #6b7280;
+
+  /* Headings */
+  --color-heading: #f9fafb;
+
+  /* Borders */
+  --color-border: #020617;
+  --color-border-strong: #020617;
+
+  /* Icons */
+  --color-icon-primary: #e5e7eb;
+  --color-icon-muted: #9ca3af;
+
+  /* Accent */
+  --color-accent: #f9fafb;
+  --color-accent-hover: #e5e7eb;
+  --color-accent-text: #020617;
+
+  /* User / Bot bubbles */
+  --color-user-bg: #343435;
+  --color-user-text: #f3f4f6;
+
+  --color-bot-bg: #020617;
+  --color-bot-text: #e5e7eb;
+
+  /* States */
+  --color-focus-ring: #60a5fa;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+
+  --btn-primary-bg: #f9fafb;
+  /* white */
+  --btn-primary-text: #020617;
+  --btn-primary-hover: #e5e7eb;
+  --btn-primary-active: #d1d5db;
+  --btn-primary-disabled: #6b7280;
+
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: #e5e7eb;
+  --btn-secondary-hover: #020617;
+  --btn-secondary-border: #020617;
+
+  --btn-danger-bg: #ef4444;
+  --btn-danger-text: #020617;
+  --btn-danger-hover: #dc2626;
+
+  --border-default: 1px solid #020617;
+  --border-strong: 1px solid #020617;
+  --border-muted: 1px solid #020617;
+
+  --border-focus: 2px solid #60a5fa;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.7);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.8);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.9);
+}

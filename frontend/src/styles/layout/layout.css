@@ -1,0 +1,43 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+}
+
+.app-header,
+.app-footer {
+  flex-shrink: 0;
+}
+
+.app-main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.page {
+  width: 100%;
+  min-width: 350px;
+  max-width: 830px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 1em 10em 1em;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+  background: var(--color-bg);
+}
+
+.safe-area {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
