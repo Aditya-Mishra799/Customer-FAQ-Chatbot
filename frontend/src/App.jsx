@@ -50,6 +50,11 @@ function App() {
 
   const handleNewMessage = async (newMessage) => {
     if (newMessage.length < 5) return;
+    if(newMessage.length > 300) {
+      toast.error("Message too long. Please limit to 300 characters.");
+      return;
+    }
+    
     setChatFeed((prevChatFeed) => [
       ...prevChatFeed,
       { id: Date.now(), role: 'user', content: newMessage, created_at: new Date().toISOString() }
