@@ -78,6 +78,7 @@ DB_PORT=5432
 ALLOWED_ORIGINS=http://localhost:5173
 
 GROQ_API_KEY=your_api_key_for_groq
+LLM_MODEL=your_ai_model
 ```
 
 4. Run the database migrations:
