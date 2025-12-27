@@ -22,8 +22,14 @@ const PromptInput = ({ placeholder = "Ask your query....", onSubmit, ...props })
     setLoading(false);
   }
 
+  const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+      ('ontouchstart' in window) ||
+      (window.innerWidth <= 768 && window.innerHeight <= 1024);
+  }
+
   const handleKeyDown = (e) => {
-    if (e.key === "Enter" && !e.shiftKey) {
+    if (!isMobile() && e.key === "Enter" && !e.shiftKey) {
       handleSubmit(e);
     }
   }
