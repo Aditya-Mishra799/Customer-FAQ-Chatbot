@@ -4,4 +4,27 @@
     flex-direction: column;
     gap: var(--space-md);
     flex-shrink: 0;
+    width: 100%;
+}
+
+.emptyState{
+    color: var(--color-text-secondary);
+    font-style: italic;
+    text-align: center;
+    height: 100;
+}
+
+.emptyCard{
+    border: 2px dashed var(--color-icon-muted);
+    padding: 2em;
+    border-radius: 10px;
+    background-color: var(--color-bg-secondary);
+    display: inline-block;
+    margin-top: 5em;
+}
+.loadingContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
 }

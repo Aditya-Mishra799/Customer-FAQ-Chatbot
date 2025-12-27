@@ -1,0 +1,25 @@
+.themeButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--btn-primary-bg);
+    padding: 0.2rem;
+    border-radius: 5px;
+    transition: color 0.3s ease, scale 0.3s ease;
+}
+
+.themeButton:hover {
+    color: var(--btn-primary-hover);
+    scale: 1.1;
+}
+
+.themeButton:focus {
+    outline: 1px solid var(--color-accent);
+    outline-offset: 1px;
+}
+
+.themeIcon {
+    width: 1.5em;
+    height: 1.5em;
+}

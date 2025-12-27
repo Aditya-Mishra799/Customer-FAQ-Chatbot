@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './SendButton.module.css'
-const SendButton = ({icon: Icon, className = "", ...props}) => {
+const SendButton = ({icon, className = "", ...props}) => {
   return (
     <button className={`${styles.sendButton} center ${className}`} {...props}>
-      {<Icon />}
+      {icon}
     </button>
   )
 }
