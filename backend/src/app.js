@@ -5,6 +5,7 @@ import dotenv from "dotenv"
 import apiMainRouter from "./routes/api.main.route.js"
 import cookieParser from "cookie-parser"
 import pool from "./config/db.js"
+import { rateLimiterApp } from "./middlewares/rateLimit.js"
 
 dotenv.config()
 const app = express()
@@ -13,6 +14,7 @@ const port = process.env.PORT || 5000
 const allowedOrigins = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(",").map(o => o.trim())
   : [];
+app.use(rateLimiterApp)
 
 app.use(express.json())
 app.use(cookieParser())
