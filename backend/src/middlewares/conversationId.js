@@ -14,16 +14,21 @@ const conversationIdMiddleware = async (req, res, next) => {
             await createConversation(conversationId);
         }
         req.conversationId = conversationId;
-        res.cookie("conversationId", conversationId, {
+        const isProd = process.env.NODE_ENV === "production";
+
+        const cookieOptions = {
             httpOnly: true,
-            sameSite: "Lax",
-        });
+            secure: isProd,
+            sameSite: isProd ? "none" : "lax",
+            path: "/",
+        };
+        res.cookie("conversationId", conversationId, cookieOptions);
         next();
     } catch (error) {
         if (error instanceof ApiError) {
             return next(error);
         }
-        next(new ApiError(500,"Failed to process conversation ID", "CONVERSATION_ID_ERROR", { originalError: error.message }));
+        next(new ApiError(500, "Failed to process conversation ID", "CONVERSATION_ID_ERROR", { originalError: error.message }));
     }
 }
 export default conversationIdMiddleware;
