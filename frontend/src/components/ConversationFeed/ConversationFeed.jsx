@@ -9,10 +9,10 @@ const chatFeed = [
 const ConversationFeed = () => {
     return (
         <div className={`${styles.conversationFeed}`}>
-            {chatFeed.map(({ id, type, text, timestamp }) => (
-                type === "agent" ?
-                    <AgentResponse key={id} text={text} /> :
-                    <UserQuery key={id} text={text} />))}
+            {chatFeed.map(({ id, role, content, timestamp }) => (
+                role === "agent" ?
+                    <AgentResponse key={id} text={content} /> :
+                    <UserQuery key={id} text={content} />))}
         </div>
     )
 }

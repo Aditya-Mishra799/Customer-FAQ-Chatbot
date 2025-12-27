@@ -13,6 +13,7 @@
   position: fixed;
   bottom: 1em;
   background-color: var(--color-accent);
+  border: var(--border-strong);
 }
 
 .promptInput>textarea {
