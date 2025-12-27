@@ -5,6 +5,7 @@ import ConversationFeed from './components/ConversationFeed/ConversationFeed';
 import { useEffect } from 'react';
 import { apiUrls, BASE_URL } from './utils/apiUrls';
 import Header from './components/Header/Header';
+import { toast, ToastContainer } from "react-toastify";
 
 function App() {
   const [chatFeed, setChatFeed] = useState([])
@@ -22,6 +23,7 @@ function App() {
       return { data: json.data, hasMore: json.hasMore };
     } catch (error) {
       console.error("Error fetching conversation:", error);
+      toast.error("Failed to load conversation. Please try again.");
       return { data: [], hasMore: false };
     }
   };
@@ -89,6 +91,7 @@ function App() {
       }
     } catch (error) {
       console.error("Error sending message:", error);
+      toast.error("Failed to send message. Please try again.");
     }
   }
   return (
@@ -98,6 +101,7 @@ function App() {
         <ConversationFeed chatFeed={chatFeed} hasMore={hasMore} loading={loading} onLoadMore={loadMoreChats}/>
         <PromptInput onSubmit={handleNewMessage} />
       </div>
+       <ToastContainer />
     </div>
   )
 }
