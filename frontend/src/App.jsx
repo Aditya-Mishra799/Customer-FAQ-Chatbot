@@ -23,7 +23,7 @@ function App() {
       return { data: json.data, hasMore: json.hasMore };
     } catch (error) {
       console.error("Error fetching conversation:", error);
-      toast.error("Failed to load conversation. Please try again.");
+      toast.error(error.message || "Failed to load conversation. Please try again.");
       return { data: [], hasMore: false };
     }
   };
@@ -98,7 +98,7 @@ function App() {
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      toast.error("Failed to send message. Please try again.");
+      toast.error(error.message || "Failed to send message. Please try again.");
     }
   }
   return (
