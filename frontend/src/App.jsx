@@ -40,9 +40,11 @@ function App() {
 
   useEffect(() => {
     const loadInitial = async () => {
+      setLoading(true);
       const { data, hasMore: more } = await fetchConversation(0);
       setChatFeed(data);
       setHasMore(more);
+      setLoading(false);
     };
     loadInitial();
   }, [])
@@ -54,7 +56,7 @@ function App() {
       toast.error("Message too long. Please limit to 300 characters.");
       return;
     }
-    
+
     setChatFeed((prevChatFeed) => [
       ...prevChatFeed,
       { id: Date.now(), role: 'user', content: newMessage, created_at: new Date().toISOString() }

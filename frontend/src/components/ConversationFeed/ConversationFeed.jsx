@@ -5,7 +5,7 @@ import UserQuery from '../UserQuery/UserQuery';
 import Loading from '../Loading/Loading';
 
 const ConversationFeed = ({ chatFeed, onLoadMore, hasMore, loading }) => {
-    if (!chatFeed || chatFeed.length === 0) {
+    if ((!chatFeed || chatFeed.length === 0) && !loading) {
         return (
             <div className={`${styles.emptyState}`}>
                 <div className={`${styles.emptyCard}`}>
