@@ -31,8 +31,8 @@ const addMessageToConversation = async (req, res, next) => {
     try {
         // add user message to conversation
         await addChatMessage(conversationId, "user", message, null);
-        // get past 15 chats for context
-        const pastChats = await getConversationById(conversationId, 0, 10);
+        // get past 6 chats for context
+        const pastChats = await getConversationById(conversationId, 0, 6);
         // stream the agent response
         const response = await generateResponseStream({
             pastChats,

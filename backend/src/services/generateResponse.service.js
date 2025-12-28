@@ -16,7 +16,7 @@ export const generateResponseStream = async ({
     const messages = [
         systemMessage,
         ...pastChats.reverse().map(({ role, content }) => ({ role, content }))
-    ];
+    ];    
     // Streaming headers
     res.setHeader("Content-Type", "text/plain");
     res.setHeader("Cache-Control", "no-cache");
