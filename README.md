@@ -135,6 +135,6 @@ The frontend will run on http://localhost:5173
 ## Usage
 
 1. Load the frontend.
-2. Old chats will be loaded if an conversation (cookie) exists.
+2. Old chats will be loaded if a conversation (cookie) exists.
 3. Send a query message with length greater than 5 and less than 300.
 4. AI response will be streamed.
