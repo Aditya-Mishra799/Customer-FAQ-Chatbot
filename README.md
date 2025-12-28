@@ -4,7 +4,9 @@ A full-stack application to answer customer queries which uses `llama-3.1-8b-ins
 Must have a Groq API key.
 [Groq](https://groq.com/)
 
-
+## Features
+- Maintains context based on past 6 messages.
+- Streams agent response as soon as they are generated.
 
 ## Deployed Links 
 - [Frontend](https://mini-faq-chatbot.vercel.app/)
